@@ -39,13 +39,20 @@ export default function ShopPage({ searchParams }: ShopPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Page Header */}
-      <div className="bg-brand-dark py-14 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="font-display text-4xl sm:text-5xl font-black text-white mb-2">
+      {/* Page Header — editorial treatment */}
+      <div className="bg-brand-dark pt-16 pb-14 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-blue/20 to-transparent" />
+        </div>
+        <div className="relative max-w-7xl mx-auto">
+          <p className="text-brand-yellow/60 text-xs font-black tracking-[0.35em] uppercase mb-3">
+            The Shop
+          </p>
+          <h1 className="font-hero text-white leading-none"
+            style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)' }}>
             {heading}
           </h1>
-          <p className="text-white/60 text-base">{subheading}</p>
+          <p className="text-white/40 mt-3 text-sm font-semibold tracking-wide">{subheading}</p>
         </div>
       </div>
 

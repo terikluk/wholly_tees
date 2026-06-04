@@ -18,6 +18,7 @@ const config: Config = {
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],
         body: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        hero: ['var(--font-hero)', 'Impact', 'sans-serif'],
       },
     },
   },

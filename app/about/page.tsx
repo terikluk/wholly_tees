@@ -10,11 +10,20 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <div className="bg-brand-dark py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-display text-5xl font-black text-white mb-4">Our Story</h1>
-          <p className="text-white/60 text-lg">
+      {/* Header — editorial treatment */}
+      <div className="bg-brand-dark pt-16 pb-14 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-blue/20 to-transparent" />
+        </div>
+        <div className="relative max-w-3xl mx-auto">
+          <p className="text-brand-yellow/60 text-xs font-black tracking-[0.35em] uppercase mb-3">
+            The Brand
+          </p>
+          <h1 className="font-hero text-white leading-none"
+            style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)' }}>
+            OUR STORY
+          </h1>
+          <p className="text-white/40 mt-3 text-sm font-semibold tracking-wide">
             Faith-forward, laugh-out-loud tees from Huntsville, AL 🚀
           </p>
         </div>

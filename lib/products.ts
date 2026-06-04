@@ -57,7 +57,7 @@ export const PRODUCTS: Product[] = [
     name: 'Chosen, Not Perfect',
     price: 2799,
     description:
-      'Spoiler: nobody's perfect and that's totally fine. You are chosen, loved, and enough exactly as you are.',
+      "Spoiler: nobody's perfect and that's totally fine. You are chosen, loved, and enough exactly as you are.",
     category: 'christian',
     images: ['https://placehold.co/600x700/FCD34D/1E1B4B?text=Chosen+Not+Perfect'],
     colors: ['yellow', 'white'],
@@ -108,7 +108,7 @@ export const PRODUCTS: Product[] = [
     name: 'Adulting Is Hard, But Jesus Tho',
     price: 2799,
     description:
-      'Taxes, traffic, and adulting in general — but at least we've got the ultimate co-pilot.',
+      "Taxes, traffic, and adulting in general — but at least we've got the ultimate co-pilot.",
     category: 'funny',
     images: ['https://placehold.co/600x700/FCD34D/1E1B4B?text=Adulting+Is+Hard'],
     colors: ['yellow', 'white', 'black'],

@@ -25,10 +25,10 @@ export async function POST(req: NextRequest) {
 
     // Retrieve full session with line items
     const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
-      expand: ['line_items.data.price.product', 'shipping_details'],
+      expand: ['line_items.data.price.product'],
     })
 
-    const shipping = fullSession.shipping_details
+    const shipping = fullSession.collected_information?.shipping_details
     const lineItems = fullSession.line_items?.data ?? []
 
     if (shipping?.address) {

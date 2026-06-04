@@ -1,9 +1,16 @@
 import type { Metadata } from 'next'
-import { Nunito, Nunito_Sans } from 'next/font/google'
+import { Nunito, Nunito_Sans, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CartDrawer from '@/components/CartDrawer'
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  variable: '--font-hero',
+  weight: '400',
+  display: 'swap',
+})
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -37,8 +44,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${nunito.variable} ${nunitoSans.variable}`}>
+    <html lang="en" className={`${bebasNeue.variable} ${nunito.variable} ${nunitoSans.variable}`}>
       <body className="min-h-screen flex flex-col bg-white">
+        {/* Announcement bar — inspired by DarkHorse's tagline strip */}
+        <div className="bg-brand-yellow text-brand-dark text-center py-2 px-4">
+          <span className="text-xs font-black tracking-[0.3em] uppercase">
+            Faith · Fun · Fashion &nbsp;·&nbsp; Free Shipping on Orders Over $50
+          </span>
+        </div>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

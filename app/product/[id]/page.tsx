@@ -23,7 +23,7 @@ const COLOR_SWATCHES: Record<string, string> = {
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = getProduct(params.id)
-  if (!product) notFound()
+  if (!product) return notFound()
 
   const related = getRelatedProducts(product)
   const { addItem, openCart } = useCart()
@@ -40,7 +40,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       return
     }
     setSizeError(false)
-    addItem(product, selectedSize, selectedColor)
+    addItem(product!, selectedSize, selectedColor)
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
   }
